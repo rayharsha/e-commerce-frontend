@@ -55,11 +55,11 @@ const Checkout = () => {
 
         setTimeout(() => {
             const selectedItems = items
-            navigate("/success", {
-                state: {
-                    items: selectedItems, total, address: addresses[selectedAddress],
+            navigate("/success",{
+                state:{
+                   items:selectedItems, total, address: addresses[selectedAddress],
                 }
-            });
+        });
             // alert("payment successful")
         }, 1000)
     }
@@ -75,7 +75,8 @@ const Checkout = () => {
                             addresses.map((addr, i) => (
                                 <div
                                     key={i}
-                                    className={`address-card ${selectedAddress === i ? "active" : ""}`} onClick={() => setSelectedAddress(i)}>
+                                    className={`address-card ${selectedAddress === i ? "active" : ""
+                                        }`} onClick={() => setSelectedAddress(i)}>
                                     <p>{addr.name}</p>
                                     <p>{addr.address}</p>
                                     <p>{addr.city}-{addr.pincode}</p>
