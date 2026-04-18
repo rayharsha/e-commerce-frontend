@@ -2,15 +2,16 @@ import { useNavigate, useParams } from "react-router-dom";
 import products from "../data/products";
 import { useState } from "react";
 import "../style/ProductDetails.css";
+import { useCart } from "../context/CartContext";
 
 const ProductDetails = () => {
     const navigate = useNavigate()
     const { id } = useParams();
-
+    const { addToCart } = useCart();
     const product = products.find((p) => p.id === Number(id));
 
-    const [selectedSize, setSelectedSize] = useState(null);
-    const [selectedColor, setSelectedColor] = useState(null);
+    // const [selectedSize, setSelectedSize] = useState(null);
+    // const [selectedColor, setSelectedColor] = useState(null);
     const [size, setSize] = useState();
     const [color, setColor] = useState();
     if (!product) return <h2>Product not found</h2>;
@@ -20,10 +21,25 @@ const ProductDetails = () => {
             alert("Please select size amd color");
             return;
         }
-        handleAddToCart({
+        addToCart({
             ...product,
             selectedSize: size,
             selectedColor: color,
+        })
+    }
+    const handleBuyNow = () => {
+        if (!size || !color) {
+            alert("Please select size and color")
+            return;
+        }
+        navigate("/checkout", {
+            state: {
+                product: {
+                    ...product,
+                    selectedSize: size,
+                    selectedColor: color,
+                }
+            }
         })
     }
     return (
@@ -44,13 +60,13 @@ const ProductDetails = () => {
                     <div className="section">
                         <h4>Select Size</h4>
                         <div className="options">
-                            {product.sizes.map((size) => (
+                            {product.sizes.map((s) => (
                                 <button
-                                    key={size}
-                                    className={selectedSize === size ? "active" : ""}
-                                    onClick={() => setSelectedSize(size)}
+                                    key={s}
+                                    className={size === s? "active" : ""}
+                                    onClick={() => setSize(s)}
                                 >
-                                    {size}
+                                    {s}
                                 </button>
                             ))}
                         </div>
@@ -60,26 +76,22 @@ const ProductDetails = () => {
                     <div className="section">
                         <h4>Select Color</h4>
                         <div className="options">
-                            {product.colors.map((color) => (
+                            {product.colors.map((c) => (
                                 <button
-                                    key={color}
-                                    className={selectedColor === color ? "active" : ""}
-                                    onClick={() => setSelectedColor(color)}
+                                    key={c}
+                                    className={color === c ? "active" : ""}
+                                    onClick={() => setColor(c)}
                                 >
-                                    {color}
+                                    {c}
                                 </button>
                             ))}
                         </div>
                     </div>
-
-                    <button className="buy-btn" onClick={() => navigate("/checkout", {
-                        state: {
-                            ...product,
-                            selectedSize: size,
-                            selectedColor: color,
-
-                        }
-                    })}>Buy Now</button>
+                    {/* {product.sizes.map((s) => (
+                        <button
+                            key={s} className={size === s ? "active" : ""} onClick={() => setSize(s)}>{s}</button>
+                    ))} */}
+                    <button className="buy-btn" onClick={handleBuyNow}>Buy Now</button>
                 </div>
             </div>
         </div>

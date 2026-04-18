@@ -18,9 +18,13 @@ const Cart = () => {
                         <div className="cart-item" key={item.id}>
 
                             <img src={item.image} alt={item.name}
-                                onClick={() => navigate(`/product/${item.id}`)} />
+                                onClick={() => navigate(`/product/${item.id}`, {
+                                    state: { product: item },
+                                })} />
 
-                            <div className="cart-info"  onClick={() => navigate(`/product/${item.id}`)}>
+                            <div className="cart-info" onClick={() => navigate(`/product/${item.id}`, {
+                                state: { product:item },
+                            })}>
                                 <h3>{item.name}</h3>
                                 <p>₹{item.price}</p>
                             </div>
