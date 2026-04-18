@@ -16,6 +16,7 @@
 }
 
 .search {
+  outline: none;
   width: 40%;
   padding: 8px;
   border-radius: 8px;
@@ -31,7 +32,8 @@
 /* 📱 Mobile */
 @media (max-width: 600px) {
   .search {
-    width: 10%;
+    /* display: none; */
+    width: 20%;
   }
 
   .nav-links span {

@@ -26,6 +26,7 @@
   margin: 10px 0;
 }
 
+
 /* Sections */
 .section {
   margin-top: 15px;
@@ -41,6 +42,7 @@
   padding: 8px 12px;
   border: 1px solid #ddd;
   background: white;
+  color: black;
   cursor: pointer;
   border-radius: 6px;
 }

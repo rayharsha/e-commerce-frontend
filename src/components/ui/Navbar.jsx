@@ -14,7 +14,7 @@ const Navbar = () => {
       />
 
       <div className="nav-links">
-        <span>Login</span>
+        {/* <span classn>Login</span> */}
         <span onClick={()=>navigate("/cart")}>Cart 🛒</span>
       </div>
     </nav>
