@@ -1,0 +1,41 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.search {
+  width: 40%;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.nav-links {
+  display: flex;
+  gap: 19px;
+  cursor: pointer;
+}
+
+/* 📱 Mobile */
+@media (max-width: 600px) {
+  .search {
+    width: 10%;
+  }
+
+  .nav-links span {
+    gap:1px;
+    font-size: 0.9rem;
+  }
+}

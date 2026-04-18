@@ -1,0 +1,159 @@
+.checkout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+  align-items: start;
+  padding: 30px;
+}
+
+/* LEFT */
+.checkout-left {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+}
+.address-list{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 15px;
+}
+.address-form {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.address-form input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+/* ITEMS */
+.checkout-item {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.checkout-item img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+/* RIGHT */
+.checkout-right {
+  flex: 1;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  height: fit-content;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.summary {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.total {
+  font-weight: bold;
+}
+
+.pay-btn {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  background: black;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+
+/* Address section container */
+.address-section {
+  margin-bottom: 25px;
+}
+
+/* Grid layout */
+.address-list {
+  display: grid;
+  /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
+  gap: 15px;
+}
+
+/* Address card */
+.address-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  padding: 14px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  position: relative;
+}
+
+/* Hover */
+.address-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* Active (selected) */
+.address-card.active {
+  border: 2px solid #4f46e5;
+  background: #eef2ff;
+}
+
+/* Name */
+.address-card p:first-child {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+/* Other text */
+.address-card p {
+  margin: 2px 0;
+  font-size: 0.9rem;
+  color: #374151;
+}
+
+/* Small badge */
+.address-card::after {
+  content: "Deliver Here";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 0.7rem;
+  background: #4f46e5;
+  color: white;
+  padding: 3px 6px;
+  border-radius: 6px;
+  opacity: 0;
+  transition: 0.2s;
+}
+
+.address-card.active::after {
+  opacity: 1;
+}
+
+/* 📱 Mobile */
+@media (max-width: 600px) {
+  .address-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 📱 MOBILE */
+@media (max-width: 768px) {
+  .checkout {
+    grid-template-columns: 1fr;
+    /* flex-direction: column; */
+  }
+}

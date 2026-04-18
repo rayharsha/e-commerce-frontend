@@ -1,0 +1,75 @@
+.details {
+  padding: 30px;
+}
+
+.details-container {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+/* Image */
+.image-box img {
+  width: 350px;
+  border-radius: 12px;
+}
+
+/* Info */
+.info-box {
+    flex: 1;
+  max-width: 400px;
+}
+
+.price {
+  color: #4f46e5;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+/* Sections */
+.section {
+  margin-top: 15px;
+}
+
+.options {
+  display: flex;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.options button {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  background: white;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+/* Active state */
+.options button.active {
+  background: black;
+  color: white;
+}
+
+/* Buy button */
+.buy-btn {
+  margin-top: 20px;
+  padding: 12px;
+  width: 100%;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 8px;
+}
+
+/* 📱 Mobile */
+@media (max-width: 768px) {
+  .details-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .image-box img {
+    width: 100%;
+  }
+}

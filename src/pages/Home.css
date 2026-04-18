@@ -1,0 +1,108 @@
+
+.home {
+  min-height: 100vh;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #f8fafc, #eef2ff);
+  font-family: "Poppins", sans-serif;
+}
+
+/* Heading */
+.home h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #111827;
+  letter-spacing: -0.5px;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(242px, 1fr));
+  gap: 25px;
+}
+
+/* Product Card */
+.product-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+}
+
+/* Hover effect */
+.product-card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Image */
+.product-card img {
+  width: 100%;
+  height: 220px;
+  /* object-fit: contain; */
+  object-fit: cover;
+  background: #f3f4f6;
+  border-radius: 12px;
+}
+
+/* Title */
+.product-card h3 {
+  font-size: 1.1rem;
+  margin: 10px 0 5px;
+  color: #111;
+}
+
+/* Price */
+.product-card p {
+  font-weight: 600;
+  color: #4f46e5;
+}
+
+/* Options */
+.options {
+  font-size: 0.8rem;
+  color: #6b7280;
+  margin-top: 5px;
+}
+
+/* Buttons container */
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+/* Buttons */
+.btn {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Primary */
+.btn.primary {
+  background: #111827;
+  color: white;
+}
+
+.btn.primary:hover {
+  background: #1f2937;
+}
+
+/* Secondary */
+.btn.secondary {
+  background: #e5e7eb;
+  color: #111;
+}
+
+.btn.secondary:hover {
+  background: #d1d5db;
+}
