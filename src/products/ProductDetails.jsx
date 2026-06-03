@@ -18,7 +18,7 @@ const ProductDetails = () => {
 
     const handleAddToCart = () => {
         if (!size || !color) {
-            alert("Please select size amd color");
+            alert("Please select size and color");
             return;
         }
         addToCart({

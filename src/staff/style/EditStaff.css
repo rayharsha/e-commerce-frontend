@@ -1,0 +1,80 @@
+.drawer-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 999;
+
+}
+
+/* .drawer-overlay.show{
+  opacity: 1;
+  visibility: visible;
+} */
+.drawer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 490px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background: white;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+    transform: translateX(100%);
+    transition: 0.3s ease;
+    z-index: 1000;
+}
+
+.drawer h2 {
+    font-weight: 400;
+    font-family: sans-serif;
+}
+
+.drawer p {
+    font-size: 12px;
+    color: #333;
+    margin-top: 2px;
+    margin-bottom: 32px;
+}
+
+.drawer label {
+    color: #333;
+    margin-top: 1px;
+}
+
+.drawer input {
+    width: 97%;
+    padding: 12px 10px;
+    gap: 12px;
+    margin-top: -6px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+.drawer.open {
+    transform: translateX(0);
+}
+
+.btn-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.cancel {
+    background: #ddd;
+    border: 1px solid #ccc;
+    padding: 10px 85px;
+    cursor: pointer;
+    color: black;
+}
+.submit {
+    background: #1e90ff;
+    color: white;
+    border: none;
+    padding: 10px 85px;
+    cursor: pointer;
+    border-radius: 5px;
+}

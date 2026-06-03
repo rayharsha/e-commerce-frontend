@@ -1,0 +1,44 @@
+.staff-header {
+  /* display: flex; */
+  justify-content: space-between;
+  align-items: center;
+  /* flex-wrap: wrap; */
+  gap: 15px;
+  margin-bottom: 20px;
+}
+.staff-top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.staff-header h2 {
+  margin: 0;
+}
+
+.sub-text {
+  color: gray;
+  font-size: 14px;
+}
+
+.add-btn {
+  background: #4f46e5;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.staff-filters {
+  display: flex;
+  justify-content: start;
+  gap: 20px;
+}
+
+.staff-filters input,
+.staff-filters select {
+  padding: 8px 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
