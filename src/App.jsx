@@ -17,8 +17,8 @@ import DashboardHome from './dashboard/pages/DashboardHome'
 import DashboardLayout from './dashboard/layout/DashboardLayout'
 import VerifyEmail from './staff/pages/verifyEmail'
 import ForgotPassword from './staff/pages/forgotPassword'
-import CategoryPage from './pages/category/CategoryPage'
 import ProductPage from "./pages/Product/ProductPage"
+import CategoryPage from './pages/category/CategoryPage'
 function App() {
 
   return (
