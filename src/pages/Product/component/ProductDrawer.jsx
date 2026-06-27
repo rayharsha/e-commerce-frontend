@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import useCategory from "../../../lib/hooks/usecategory";
 import useProduct from "../../../lib/hooks/useProduct";
-import TreeNode from "../../Category/component/TreeNode";
+import TreeNode from "../../category/component/TreeNode";
 
 const ProductDrawer = ({ onClose, mode, selectedProduct, isOpen, onSuccess, }) => {
     const [name, setName] = useState("");
