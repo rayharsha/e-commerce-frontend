@@ -20,8 +20,11 @@ const Sidebar = () => {
             <div className='section'>
                 <p className='title'>Catalog</p>
                 <ul>
-                    <li>Products</li>
-                    <li>Categories</li>
+                    <li className='active'>
+                         <NavLink to="/dashboard/product">Products</NavLink></li>
+                    <li className='active'>
+                        <NavLink to="/dashboard/category">Categories</NavLink>
+                        </li>
                     <li>Attributes</li>
                     <li>coupons</li>
                     <li>Campaigns</li>
@@ -42,7 +45,7 @@ const Sidebar = () => {
                 <p className='title'> Staff</p>
                 <ul>
                     <li>
-                        <span>👨‍💼</span>
+                        {/* <span></span> */}
                         <NavLink to="/dashboard/staff" > Our Staff</NavLink>
                     </li>
                 </ul>

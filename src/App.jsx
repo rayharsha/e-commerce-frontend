@@ -17,7 +17,8 @@ import DashboardHome from './dashboard/pages/DashboardHome'
 import DashboardLayout from './dashboard/layout/DashboardLayout'
 import VerifyEmail from './staff/pages/verifyEmail'
 import ForgotPassword from './staff/pages/forgotPassword'
-
+import CategoryPage from './pages/Category/CategoryPage'
+import ProductPage from "./pages/Product/ProductPage"
 function App() {
 
   return (
@@ -32,10 +33,11 @@ function App() {
       <Route path="/success" element={<Success />} />
       <Route path="/" element={<LoginBox />} />
       <Route path="/delivery" element={<DeliveryLogin />} />
-
       <Route path="/dashboard" element={<DashboardLayout />}>
         <Route index element={<DashboardHome />} />
         <Route path="staff" element={<StaffPage />} />
+        <Route path="category" element={<CategoryPage />} />
+        <Route path="product" element={<ProductPage />} />
       </Route>
     </Routes>
 

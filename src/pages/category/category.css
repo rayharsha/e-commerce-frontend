@@ -1,0 +1,257 @@
+.category-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.category-header-left h1 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #1f2937;
+}
+
+.category-header-left p {
+    font-size: 14px;
+    color: #6b7280;
+    margin-top: 4px;
+}
+
+.btn {
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 11px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: 0.2s;
+}
+
+.btn-outline {
+    background: #fff;
+    color: black;
+    border: 1px solid #ddd;
+}
+
+.btn-outline:hover {
+    background: #f3f4f6;
+}
+
+.btn-primary {
+    background: #2563eb;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #1d4ed8;
+}
+
+.btn-danger {
+    background:white;
+    color: black;
+    border: 1px solid #ddd;
+}
+
+.btn-danger:hover {
+    background: #f3f4f6;
+}
+
+.header-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.drawer-overlay {
+    position: fixed;
+    top: 0px;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: flex-end;
+    z-index: 9999;
+}
+
+.drawer {
+    width: 695px;
+    position: fixed;
+    height: 97%;
+    left: 0;
+    right: 0;
+    top: 0;
+    background: white;
+    padding: 20px;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    animation: slideIn 0.3s ease forwards;
+}
+
+/* ===== DRAWER SECTIONS ===== */
+.drawer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* margin-bottom: 16px;÷ */
+    /* padding: 20px 24px; */
+    /* background: #f9fafb; */
+    border-bottom: 1px solid #eee;
+}
+
+.drawer-title {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.drawer-sub {
+    font-size: 20px;
+    margin-top: 12px;
+    font-weight: 500;
+    color: #eee;
+}
+
+.drawer-close {
+    cursor: pointer;
+    font-size: 18px;
+    color: #6b7280;
+    margin-left: 22px;
+}
+
+.drawer-close:hover {
+    color: #000;
+    background: #db8b8b;
+    padding: 4px;
+}
+
+.drawer-body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 28px;
+    justify-content: space-between;
+    /* flex: 1; */
+}
+
+.form-group {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    align-items: center;
+    gap: 10px;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #374151;
+}
+.custom-select{
+    position: relative;
+    grid-template-columns: 140px 1fr;
+    align-items: center;
+    width: 100%;
+}
+.select-wrapper {
+   padding: 10px;
+   border: 1px solid #ccc;
+   border-radius: 8px;
+   cursor: pointer;
+   background: white;
+}
+
+.select-wrapper:hover {
+  border-radius: #888;
+}
+
+.dropdown{
+    position: absolute;
+    top: 110%;
+    left: 0;
+    width: 100%;
+    max-height: 250px;
+    overflow-y: auto;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 100;
+}
+.drawer-footer {
+    margin-bottom: 50px;
+    padding: 16px 24px;
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.input {
+    width: 100%;
+    padding: 20px 20px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    margin-top: 15px;
+    background: #fff;
+    font-size: 14px;
+}
+
+textarea.input {
+    min-height: 70px;
+    width: 505px;
+    /* resize: none; */
+}
+
+.input:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+
+/* ===== TOGGLE ROW ===== */
+.toggle-row {
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toggle {
+    width: 40px;
+    height: 20px;
+    background: #ddd;
+    border-radius: 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+.toggle::after {
+    content: "";
+    width: 18px;
+    height: 18px;
+    background: white;
+    position: absolute;
+    top: 1px;
+    left: 2px;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.toggle.active {
+    background: #22c55e;
+}
+
+.toggle.active::after {
+    left: 20px;
+}
+
+/* @keyframes slideIn {
+    from{
+        transform: translateX(100%);
+    }
+    to{
+        transform: translateX(0);
+    }
+} */
+
+/* .toggle-row span {
+  font-size: 14px;
+  font-weight: 500;
+} */
