@@ -134,26 +134,6 @@ tr:hover {
   z-index: 999;
 
 }
-/* .drawer-overlay.show{
-  opacity: 1;
-  visibility: visible;
-} */
-/* .drawer {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 350px;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  /* padding: 20px; */
-  /* background: white; */
-  /* box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2); */
-  /* transform: translateX(100%); */
-  /* transition: 0.3s ease; */
-  /* z-index: 1000; */
-/* } */ */
-
 .drawer h2 {
   font-weight: 400;
   font-family: sans-serif;
@@ -181,9 +161,7 @@ tr:hover {
   border-radius: 6px;
 }
 
-.drawer.open {
-  /* transform: translateX(0); */
-}
+
 
 @media(max-width: 768px) {
   .staff-page {

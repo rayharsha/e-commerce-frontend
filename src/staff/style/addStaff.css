@@ -17,7 +17,7 @@
     visibility: visible;
 }
 
-/* Drawer */
+
 .drawer {
     position: fixed;
     top: 0;
@@ -35,7 +35,6 @@
 }
 
 .drawer.open {
-    /* left: 0; */
     transform: translateX(0);
 }
 
